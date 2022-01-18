@@ -1,0 +1,7 @@
+[styles]
+header1 = white on blue
+header2 = blue on default
+header3 = bright_white on blue
+info = dim cyan on white
+warning = magenta
+danger = bold red
