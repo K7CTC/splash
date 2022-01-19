@@ -2,6 +2,20 @@ import time
 from console import console
 from rich.text import Text
 
+def move(r, c):
+    print(f'\033[{r};{c}H', end='')
+
+def logo_generator(shade):    
+    logo = [
+        f'[grey{shade}]╭─────────╮  ╭─╮  ╭─────────╮  ╭─────────╮  ╭─────────╮[/]',               
+        f'[grey{shade}]╰──────╮  │  ╰─╯  ╰─────────╯  ╰──────╮  │  │ ╭───────╯[/]',
+        f'[grey{shade}]╭──────╯  │  ╭─╮  ╭───────╮    ╭──────╯  │  │ ╰───────╮[/]',
+        f'[grey{shade}]│ ╭───────╯  │ │  │ ╭─────╯    │ ╭────╮  ⎨  ╰──────╮  │[/]',
+        f'[grey{shade}]│ │          │ │  │ ╰───────╮  │ │    │  │  ╭──────╯  │[/]',
+        f'[grey{shade}]╰─╯          ╰─╯  ╰─────────╯  ╰─╯    ╰──╯  ╰─────────╯[/]'
+    ]
+    return logo
+
 def header(title):
     console.print(f'[header1] [header3]●[/] {title}[/][header2]█▉▊▋▌▍▎▏[/]')
 
