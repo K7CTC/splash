@@ -7,57 +7,16 @@ def cursor_move(row, column):
 def cursor_home():
     print(f'\033[H', end='\r')
 
-
-
-
-
-
-
-
-
-
-def logo_print_line(line, color):
-    lines = [
-        '╭─────────╮  ╭─╮  ╭─────────╮  ╭─────────╮  ╭─────────╮',
-        '╰──────╮  │  ╰─╯  ╰─────────╯  ╰──────╮  │  │ ╭───────╯',
-        '╭──────╯  │  ╭─╮  ╭───────╮    ╭──────╯  │  │ ╰───────╮',
-        '│ ╭───────╯  │ │  │ ╭─────╯    │ ╭────╮  ⎨  ╰──────╮  │',
-        '│ │          │ │  │ ╰───────╮  │ │    │  │  ╭──────╯  │',
-        '╰─╯          ╰─╯  ╰─────────╯  ╰─╯    ╰──╯  ╰─────────╯'
-    ]
-    style = f'color({color})'
-    if color == 0:
-        lines[line] = '                                                       '
-    row = line + 8
-    column = 14
-    cursor_move(row, column)
-    console.print(lines[line], style=style)
-    cursor_home()
-
-def title_print_line(color):
-    style = f'color({color})'
-    row = 15
-    column = 22
-    cursor_move(row, column)
-    console.print('The Raspberry Pi Event Reporting System', style=style)
-    cursor_home()
-
-
-
-
-
-
-
-
 def splash():
     console.clear()
 
     cursor_move(15,27)
-    console.print('C h r i s    C l e m e n t', style='color(249)')
+    console.print('[grey70]C h r i s    C l e m e n t[/]')
     cursor_home()
     
     callsign_elements = ['▰▰   ▰▰','▰▰  ▰▰ ','▰▰▰▰▰','▰▰▰▰▰▰▰','▰    ▰▰','    ▰▰','   ▰▰',' ▰▰▰▰▰▰','▰▰','▰▰▰▰▰▰▰▰','   ▰▰']
-    frame_delay = .03
+    
+    frame_delay = .02
 
     #K
     cursor_move(9, 16)
@@ -80,7 +39,8 @@ def splash():
     console.print(callsign_elements[0], style='color(26)')
     cursor_home()
     time.sleep(frame_delay)
-    time.sleep(.06)
+    
+    time.sleep(.2)
 
     #7
     cursor_move(13, 26)
@@ -103,7 +63,8 @@ def splash():
     console.print(callsign_elements[3], style='color(26)')
     cursor_home()
     time.sleep(frame_delay)
-    time.sleep(.06)
+    
+    time.sleep(.2)
 
     #C
     cursor_move(9, 36)
@@ -126,7 +87,8 @@ def splash():
     console.print(callsign_elements[7], style='color(26)')
     cursor_home()
     time.sleep(frame_delay)
-    time.sleep(.06)
+    
+    time.sleep(.2)
 
     #T
     cursor_move(13, 46)
@@ -149,7 +111,8 @@ def splash():
     console.print(callsign_elements[9], style='color(26)')
     cursor_home()
     time.sleep(frame_delay)
-    time.sleep(.06)
+    
+    time.sleep(.2)
 
     #C
     cursor_move(9, 57)
@@ -172,46 +135,67 @@ def splash():
     console.print(callsign_elements[7], style='color(26)')
     cursor_home()
     time.sleep(frame_delay)
-    time.sleep(.06)
+    
+    time.sleep(.5)
 
     cursor_move(19,30)
-    # console.print('[grey70]Proudly presents...[/]')
-    console.print('Proudly presents...', style='color(249)')
+    console.print('[grey70]Proudly presents...[/]')
     cursor_home()
 
-    time.sleep(2)
+    time.sleep(1.5)
+
     console.clear()
+    
     time.sleep(.75)
 
-  
+    def logo_print_line(line, color):
+        lines = [
+            '╭─────────╮  ╭─╮  ╭─────────╮  ╭─────────╮  ╭─────────╮',
+            '╰──────╮  │  ╰─╯  ╰─────────╯  ╰──────╮  │  │ ╭───────╯',
+            '╭──────╯  │  ╭─╮  ╭───────╮    ╭──────╯  │  │ ╰───────╮',
+            '│ ╭───────╯  │ │  │ ╭─────╯    │ ╭────╮  ⎨  ╰──────╮  │',
+            '│ │          │ │  │ ╰───────╮  │ │    │  │  ╭──────╯  │',
+            '╰─╯          ╰─╯  ╰─────────╯  ╰─╯    ╰──╯  ╰─────────╯'
+        ]
+        style = f'color({color})'
+        if color == 0:
+            lines[line] = '                                                       '
+        row = line + 8
+        column = 14
+        cursor_move(row, column)
+        console.print(lines[line], style=style)
+        cursor_home()
 
 
-    delay = .06
+
+
+
+    frame_delay = .06
 
     logo_print_line(0, 235)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(1, 235)
     logo_print_line(0, 231)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(2, 235)
     logo_print_line(1, 231)
     logo_print_line(0, 249)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(3, 235)
     logo_print_line(2, 231)
     logo_print_line(1, 249)
     logo_print_line(0, 244)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(4, 235)
     logo_print_line(3, 231)
     logo_print_line(2, 249)
     logo_print_line(1, 244)
     logo_print_line(0, 239)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(5, 235)
     logo_print_line(4, 231)
@@ -219,7 +203,7 @@ def splash():
     logo_print_line(2, 244)
     logo_print_line(1, 239)
     logo_print_line(0, 235)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(5, 231)
     logo_print_line(4, 249)
@@ -227,35 +211,35 @@ def splash():
     logo_print_line(2, 239)
     logo_print_line(1, 235)
     logo_print_line(0, 0)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(5, 249)
     logo_print_line(4, 244)
     logo_print_line(3, 239)
     logo_print_line(2, 235)
     logo_print_line(1, 0)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(5, 244)
     logo_print_line(4, 239)
     logo_print_line(3, 235)
     logo_print_line(2, 0)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(5, 239)
     logo_print_line(4, 235)
     logo_print_line(3, 0)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(5, 235)
     logo_print_line(4, 0)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(5, 0)
 
     time.sleep(.5)
 
-    delay = .12
+    frame_delay = .12
 
     logo_print_line(0, 235)
     logo_print_line(1, 235)
@@ -263,7 +247,7 @@ def splash():
     logo_print_line(3, 235)
     logo_print_line(4, 235)
     logo_print_line(5, 235)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(0, 231)
     logo_print_line(1, 231)
@@ -271,7 +255,7 @@ def splash():
     logo_print_line(3, 231)
     logo_print_line(4, 231)
     logo_print_line(5, 231)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(0, 253)
     logo_print_line(1, 253)
@@ -279,7 +263,7 @@ def splash():
     logo_print_line(3, 253)
     logo_print_line(4, 253)
     logo_print_line(5, 253)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     logo_print_line(0, 249)
     logo_print_line(1, 249)
@@ -290,14 +274,30 @@ def splash():
 
     time.sleep(.25)
 
+
+
+
+
+    def title_print_line(color):
+        style = f'color({color})'
+        row = 15
+        column = 22
+        cursor_move(row, column)
+        console.print('The Raspberry Pi Event Reporting System', style=style)
+        cursor_home()
+
+
+
+
+
     title_print_line(235)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     title_print_line(231)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     title_print_line(253)
-    time.sleep(delay)
+    time.sleep(frame_delay)
 
     title_print_line(249)
 
