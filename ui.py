@@ -52,8 +52,6 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    #time.sleep(.1)
-
     #7
     cursor_move(13, 26)
     console.print(callsign_elements[6], style='color(26)')
@@ -76,8 +74,6 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    #time.sleep(.1)
-
     #C
     cursor_move(9, 36)
     console.print(callsign_elements[7], style='color(26)')
@@ -100,8 +96,6 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    #time.sleep(.1)
-
     #T
     cursor_move(13, 46)
     console.print(callsign_elements[10], style='color(26)')
@@ -124,8 +118,6 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    #time.sleep(.1)
-
     #C
     cursor_move(9, 57)
     console.print(callsign_elements[7], style='color(26)')
