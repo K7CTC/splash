@@ -14,9 +14,21 @@ def splash():
     console.print('[grey70]C h r i s    C l e m e n t[/]')
     cursor_home()
     
-    callsign_elements = ['▰▰   ▰▰','▰▰  ▰▰ ','▰▰▰▰▰','▰▰▰▰▰▰▰','▰    ▰▰','    ▰▰','   ▰▰',' ▰▰▰▰▰▰','▰▰','▰▰▰▰▰▰▰▰','   ▰▰']
+    callsign_elements = [
+        '▰▰   ▰▰',
+        '▰▰  ▰▰ ',
+        '▰▰▰▰▰',
+        '▰▰▰▰▰▰▰',
+        '▰    ▰▰',
+        '    ▰▰',
+        '   ▰▰',
+        ' ▰▰▰▰▰▰',
+        '▰▰',
+        '▰▰▰▰▰▰▰▰',
+        '   ▰▰'
+    ]
     
-    frame_delay = .02
+    frame_delay = .03
 
     #K
     cursor_move(9, 16)
@@ -40,7 +52,7 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    time.sleep(.2)
+    #time.sleep(.1)
 
     #7
     cursor_move(13, 26)
@@ -64,7 +76,7 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    time.sleep(.2)
+    #time.sleep(.1)
 
     #C
     cursor_move(9, 36)
@@ -88,7 +100,7 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    time.sleep(.2)
+    #time.sleep(.1)
 
     #T
     cursor_move(13, 46)
@@ -112,7 +124,7 @@ def splash():
     cursor_home()
     time.sleep(frame_delay)
     
-    time.sleep(.2)
+    #time.sleep(.1)
 
     #C
     cursor_move(9, 57)
@@ -146,7 +158,7 @@ def splash():
 
     console.clear()
     
-    time.sleep(.75)
+    time.sleep(1)
 
     def logo_print_line(line, color):
         lines = [
@@ -165,10 +177,6 @@ def splash():
         cursor_move(row, column)
         console.print(lines[line], style=style)
         cursor_home()
-
-
-
-
 
     frame_delay = .06
 
@@ -237,7 +245,7 @@ def splash():
 
     logo_print_line(5, 0)
 
-    time.sleep(.5)
+    time.sleep(.25)
 
     frame_delay = .12
 
@@ -274,10 +282,6 @@ def splash():
 
     time.sleep(.25)
 
-
-
-
-
     def title_print_line(color):
         style = f'color({color})'
         row = 15
@@ -285,10 +289,6 @@ def splash():
         cursor_move(row, column)
         console.print('The Raspberry Pi Event Reporting System', style=style)
         cursor_home()
-
-
-
-
 
     title_print_line(235)
     time.sleep(frame_delay)
@@ -301,34 +301,9 @@ def splash():
 
     title_print_line(249)
 
-    time.sleep(3)
+    time.sleep(2)
 
     console.clear()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 def header(title):
     console.print(f' ≣ {title} ❱❱❱ ')
