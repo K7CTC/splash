@@ -1,3 +1,4 @@
+from operator import ne
 import time
 from console import console
 
@@ -293,11 +294,12 @@ def splash():
 
     title_print_line(249)
 
-    time.sleep(2)
+    time.sleep(3)
 
     console.clear()
 
 def header(title):
+    cursor_home()
     console.print(f' ≣ {title} ❱❱❱ ')
 
 def frame():
@@ -325,3 +327,30 @@ def frame():
     console.print()
     #console.print("[header1] This is the footer                                                      Status [/]")
     console.print('[bright_cyan]─[/][bright_blue]─[/][blue]─[[/][white] 105[/][bright_blue] of [/][white]200 [/][blue]]────────────────────────────────────────────────────[[/][white]  53[/][bright_blue]% [/][blue]]─[/][bright_blue]─[/][bright_cyan]─[/]')
+
+def mock_ui():
+    console.print(f' ≣ PiERS ❱ Main Menu  ')
+    console.print('[bright_cyan]┎[/][bright_blue]──[/][blue]────────────────────── ─── ── ─ ─  ─[/]')
+    console.print('[bright_blue]┃[/]')
+    console.print('[blue]┃[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print('[blue]│[/]')
+    console.print()
+    console.print('[blue]│[/]')
+    console.print()
+    console.print()
+    console.print('[blue]│[/]')
+    console.print()
+    console.print()
+    console.print('[bright_cyan]─[/][bright_blue]─[/][blue]─[[/][white] 105[/][bright_blue] of [/][white]200 [/][blue]]────────────────────────────────────────────────────[[/][white]  53[/][bright_blue]% [/][blue]]─[/][bright_blue]─[/][bright_cyan]─[/]')
+    console.print('Start Line: ', end='')
+    input()
